@@ -4,18 +4,6 @@
 
 /* End IMPORTS */
 
-/* START AOS */
-
-[data-aos]{
-  visibility: hidden;
-}
-
-[data-aos].aos-animate{
-  visibility: visible;
-}
-
-/* END AOS */
-
 *{
     margin: 0;
 
@@ -27,19 +15,6 @@
 }
 
 /* START variables */
-
-:root{
-    --burntsienna: #EE6C4D;
-
-    --coral: #F38D68;
-
-    --rebeccapurple: #662C91;
-
-    --persiangreen: #17A398;
-    
-    --jet: #33312E;
-}
-
 /* END variables */
 
 /* START Homepage styles */
@@ -51,17 +26,17 @@ body{
 
     justify-content: center;
 
-    background-color: var(--jet);
+    background-color: white;
 
     width: 100%;
 
-    height: 1000vh;
+    height: fit-content;
 }
 
 .navigation{
     position: absolute;
 
-    top: 150%;
+    top: 0px;
 
     display: grid;
 
@@ -77,19 +52,15 @@ body{
 
     text-align: center;
 
-    width: 75%;
+    width: 100%;
 
     height: fit-content;
     
-    background-color: #17A39845;
-
-    border: 4px solid #33312E75;
-
-    border-radius: 65px;
+    background-color: #2d3142;
 }
 
 .ltext{
-    color: var(--jet);
+    color: white;
 
     font-family: 'Nunito Sans', sans-serif;
 
@@ -103,37 +74,10 @@ body{
 }
 
 .ltext:hover{
-    transform: scale(105%);
-
-    color: color-mix(in var(--jet) 75% var(--rebeccapurple) 25%);
-}
-
-.yt{
-    width: 128px;
-
-    height: 53.75px;
-}
-
-.yt:hover{
-    transform: scaleX(105%);
-}
-
-.gh{
-    width: 100px;
-
-    height: 100px;
-}
-
-.gh:hover{
-    transform: scale(105%);
+    color: #ef8354;
 }
 
 /* END Homepage styles */
 
 /* START classlists */
-
-body.scroll-locked{
-    overflow: hidden;
-}
-
 /* END classlists */
