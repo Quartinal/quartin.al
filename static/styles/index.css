@@ -46,9 +46,9 @@ body{
 
     grid-column-gap: 65px;
 
-    align-items: center;
+    place-items: center;
 
-    justify-content: center;
+    place-content: center;
 
     text-align: center;
 
@@ -75,6 +75,18 @@ body{
 
 .ltext:hover{
     color: #ef8354;
+}
+
+.discord{
+    background-image: url("/assets/images/discord.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 211px;
+    height: 44px;
+}
+
+.discord:hover{
+    background-image: url("/assets/images/discord_hovered.svg");
 }
 
 /* END Homepage styles */
