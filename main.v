@@ -4,24 +4,24 @@ import veb
 import os
 
 pub struct Context {
-    veb.Context
+	veb.Context
 }
 
 pub struct App {
-    veb.StaticHandler
+	veb.StaticHandler
 }
 
 fn serve_static() {
-    os.chdir(os.dir(os.executable())) or { panic(err) }
+	os.chdir(os.dir(os.executable())) or { panic(err) }
 
-    mut app := &App{}
+	mut app := &App{}
 
-    app.static_mime_types[".glb"] = "model/gltf-binary"
-    app.handle_static("static", true) or { panic(err) }
+	app.static_mime_types['.glb'] = 'model/gltf-binary'
+	app.handle_static('static', true) or { panic(err) }
 
-    veb.run[App, Context](mut app, 8080)
+	veb.run[App, Context](mut app, 8080)
 }
 
 fn main() {
-    serve_static()
+	serve_static()
 }
