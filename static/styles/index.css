@@ -1,14 +1,15 @@
 /* Start IMPORTS */
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap");
 
 /* End IMPORTS */
 
-*::-webkit-scrollbar{
+*::-webkit-scrollbar {
     display: none;
 }
 
-*{
+* {
     margin: 0;
 
     padding: 0;
@@ -23,7 +24,7 @@
 
 /* START Homepage styles */
 
-body{
+body {
     display: flex;
 
     align-items: center;
@@ -37,7 +38,7 @@ body{
     height: fit-content;
 }
 
-.navigation{
+.navigation {
     position: absolute;
 
     top: 0px;
@@ -50,7 +51,7 @@ body{
 
     grid-column-gap: 65px;
 
-    place-items: center;
+    place-items: center start;
 
     place-content: center;
 
@@ -59,17 +60,17 @@ body{
     width: 100%;
 
     height: fit-content;
-    
+
     background-color: #2d3142;
 }
 
-.ltext{
+.ltext {
     color: white;
 
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: "Nunito Sans", sans-serif;
 
     font-weight: bold;
-    
+
     font-size: 45px;
 
     cursor: default;
@@ -77,11 +78,11 @@ body{
     user-select: none;
 }
 
-.ltext:hover{
+.ltext:hover {
     color: #ef8354;
 }
 
-.discord{
+.discord {
     background-image: url("/assets/images/discord.svg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -89,11 +90,11 @@ body{
     height: 44px;
 }
 
-.discord:hover{
+.discord:hover {
     background-image: url("/assets/images/discord_hovered.svg");
 }
 
-.youtube{
+.youtube {
     background-image: url("data:image/svg+xml;base64,ICAgICAgICA8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaGVpZ2h0PSI1My43NSIgd2lkdGg9IjEyOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeT0iMCIgeD0iMCIgaWQ9IkxheWVyXzEiIHZlcnNpb249IjEuMSIgdmlld0JveD0iLTU3LjE1IC0yMS4yNSA0OTUuMyAxMjcuNSI+PHN0eWxlIGlkPSJzdHlsZTc0MjciIHR5cGU9InRleHQvY3NzIj4uc3Qye2ZpbGw6d2hpdGV9PC9zdHlsZT48ZyBpZD0iZzc0MzMiPjxwYXRoIGlkPSJwYXRoNzQyOSIgZD0iTTExOC45IDEzLjNjLTEuNC01LjItNS41LTkuMy0xMC43LTEwLjdDOTguNyAwIDYwLjcgMCA2MC43IDBzLTM4IDAtNDcuNSAyLjVDOC4xIDMuOSAzLjkgOC4xIDIuNSAxMy4zIDAgMjIuOCAwIDQyLjUgMCA0Mi41czAgMTkuOCAyLjUgMjkuMkMzLjkgNzYuOSA4IDgxIDEzLjIgODIuNCAyMi44IDg1IDYwLjcgODUgNjAuNyA4NXMzOCAwIDQ3LjUtMi41YzUuMi0xLjQgOS4zLTUuNSAxMC43LTEwLjcgMi41LTkuNSAyLjUtMjkuMiAyLjUtMjkuMnMuMS0xOS44LTIuNS0yOS4zeiIgZmlsbD0id2hpdGUiLz48cGF0aCBpZD0icG9seWdvbjc0MzEiIGZpbGw9IiMyZDMxNDIiIGQ9Ik00OC42IDI0LjN2MzYuNGwzMS42LTE4LjJ6Ii8+PC9nPjxnIGlkPSJnNzQ1MSI+PGcgaWQ9Imc3NDQ5Ij48cGF0aCBpZD0icGF0aDc0MzUiIGQ9Ik0xNzYuMyA3Ny40Yy0yLjQtMS42LTQuMS00LjEtNS4xLTcuNi0xLTMuNC0xLjUtOC0xLjUtMTMuNnYtNy43YzAtNS43LjYtMTAuMyAxLjctMTMuOCAxLjItMy41IDMtNiA1LjQtNy42IDIuNS0xLjYgNS43LTIuNCA5LjctMi40IDMuOSAwIDcuMS44IDkuNSAyLjQgMi40IDEuNiA0LjEgNC4yIDUuMiA3LjYgMS4xIDMuNCAxLjcgOCAxLjcgMTMuOHY3LjdjMCA1LjctLjUgMTAuMi0xLjYgMTMuNy0xLjEgMy40LTIuOCA2LTUuMiA3LjYtMi40IDEuNi01LjcgMi40LTkuOCAyLjQtNC4yLS4xLTcuNi0uOS0xMC0yLjV6bTEzLjUtOC40Yy43LTEuNyAxLTQuNiAxLTguNVY0My45YzAtMy44LS4zLTYuNi0xLTguNC0uNy0xLjgtMS44LTIuNi0zLjUtMi42LTEuNiAwLTIuOC45LTMuNCAyLjYtLjcgMS44LTEgNC42LTEgOC40djE2LjZjMCAzLjkuMyA2LjggMSA4LjUuNiAxLjcgMS44IDIuNiAzLjUgMi42IDEuNiAwIDIuNy0uOCAzLjQtMi42eiIgY2xhc3M9InN0MiIvPjxwYXRoIGlkPSJwYXRoNzQzNyIgZD0iTTM2MC45IDU2LjNWNTljMCAzLjQuMSA2IC4zIDcuNy4yIDEuNy42IDMgMS4zIDMuNy42LjggMS42IDEuMiAzIDEuMiAxLjggMCAzLS43IDMuNy0yLjEuNy0xLjQgMS0zLjcgMS4xLTdsMTAuMy42Yy4xLjUuMSAxLjEuMSAxLjkgMCA0LjktMS4zIDguNi00IDExLTIuNyAyLjQtNi41IDMuNi0xMS40IDMuNi01LjkgMC0xMC0xLjktMTIuNC01LjYtMi40LTMuNy0zLjYtOS40LTMuNi0xNy4ydi05LjNjMC04IDEuMi0xMy44IDMuNy0xNy41IDIuNS0zLjcgNi43LTUuNSAxMi42LTUuNSA0LjEgMCA3LjMuOCA5LjUgMi4zIDIuMiAxLjUgMy43IDMuOSA0LjYgNyAuOSAzLjIgMS4zIDcuNiAxLjMgMTMuMnY5LjFoLTIwLjF6bTEuNS0yMi40Yy0uNi44LTEgMi0xLjIgMy43LS4yIDEuNy0uMyA0LjMtLjMgNy44djMuOGg4Ljh2LTMuOGMwLTMuNC0uMS02LS4zLTcuOC0uMi0xLjgtLjctMy0xLjMtMy43LS42LS43LTEuNi0xLjEtMi44LTEuMS0xLjQtLjEtMi4zLjMtMi45IDEuMXoiIGNsYXNzPSJzdDIiLz48cGF0aCBpZD0icGF0aDc0MzkiIGQ9Ik0xNDcuMSA1NS4zTDEzMy41IDZoMTEuOWw0LjggMjIuM2MxLjIgNS41IDIuMSAxMC4yIDIuNyAxNC4xaC4zYy40LTIuOCAxLjMtNy40IDIuNy0xNGw1LTIyLjRoMTEuOUwxNTkgNTUuM3YyMy42aC0xMS44VjU1LjN6IiBjbGFzcz0ic3QyIi8+PHBhdGggaWQ9InBhdGg3NDQxIiBkPSJNMjQxLjYgMjUuN1Y3OWgtOS40bC0xLTYuNWgtLjNjLTIuNSA0LjktNi40IDcuNC0xMS41IDcuNC0zLjUgMC02LjEtMS4yLTcuOC0zLjUtMS43LTIuMy0yLjUtNS45LTIuNS0xMC45VjI1LjdoMTJ2MzkuMWMwIDIuNC4zIDQuMS44IDUuMXMxLjQgMS41IDIuNiAxLjVjMSAwIDItLjMgMy0xIDEtLjYgMS43LTEuNCAyLjEtMi40VjI1Ljd6IiBjbGFzcz0ic3QyIi8+PHBhdGggaWQ9InBhdGg3NDQzIiBkPSJNMzAzLjEgMjUuN1Y3OWgtOS40bC0xLTYuNWgtLjNjLTIuNSA0LjktNi40IDcuNC0xMS41IDcuNC0zLjUgMC02LjEtMS4yLTcuOC0zLjUtMS43LTIuMy0yLjUtNS45LTIuNS0xMC45VjI1LjdoMTJ2MzkuMWMwIDIuNC4zIDQuMS44IDUuMXMxLjQgMS41IDIuNiAxLjVjMSAwIDItLjMgMy0xIDEtLjYgMS43LTEuNCAyLjEtMi40VjI1Ljd6IiBjbGFzcz0ic3QyIi8+PHBhdGggaWQ9InBhdGg3NDQ1IiBkPSJNMjc0LjIgMTUuN2gtMTEuOXY2My4yaC0xMS43VjE1LjdoLTExLjlWNmgzNS41eiIgY2xhc3M9InN0MiIvPjxwYXRoIGlkPSJwYXRoNzQ0NyIgZD0iTTM0Mi44IDM0LjJjLS43LTMuNC0xLjktNS44LTMuNS03LjNzLTMuOS0yLjMtNi43LTIuM2MtMi4yIDAtNC4zLjYtNi4yIDEuOS0xLjkgMS4yLTMuNCAyLjktNC40IDQuOWgtLjFWMy4zaC0xMS42djc1LjZoOS45bDEuMi01aC4zYy45IDEuOCAyLjMgMy4yIDQuMiA0LjMgMS45IDEgMy45IDEuNiA2LjIgMS42IDQuMSAwIDctMS45IDguOS01LjYgMS45LTMuNyAyLjktOS42IDIuOS0xNy41di04LjRjLS4xLTYuMS0uNC0xMC44LTEuMS0xNC4xem0tMTEgMjEuN2MwIDMuOS0uMiA2LjktLjUgOS4xLS4zIDIuMi0uOSAzLjgtMS42IDQuNy0uOC45LTEuOCAxLjQtMyAxLjQtMSAwLTEuOS0uMi0yLjctLjctLjgtLjUtMS41LTEuMi0yLTIuMVYzOC4xYy40LTEuNCAxLjEtMi42IDIuMS0zLjYgMS0uOSAyLjEtMS40IDMuMi0xLjQgMS4yIDAgMi4yLjUgMi44IDEuNC43IDEgMS4xIDIuNiAxLjQgNC44LjMgMi4zLjQgNS41LjQgOS42djd6IiBjbGFzcz0ic3QyIi8+PC9nPjwvZz48L3N2Zz4K");
     background-size: cover;
     background-repeat: no-repeat;
@@ -101,15 +102,38 @@ body{
     height: 53.75px;
 }
 
-.projects{
+.projects {
     display: grid;
     position: relative;
     grid-template-columns: auto 1fr;
+    column-gap: 10px;
     background-color: #ef8354;
     min-height: 500px;
     height: fit-content;
     width: 100%;
     overflow: hidden;
+}
+
+.project_title {
+    color: white;
+    font-size: 33px;
+    font-weight: 400;
+    font-family: "Jolly Lodger", system-ui;
+    user-select: none;
+    cursor: default;
+}
+
+.project_title:hover{
+    -webkit-text-stroke: 1px #2d3142;
+}
+
+.project_desc{
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: "Nunito Sans", sans-serif;
+    cursor: default;
+    user-select: none;
 }
 
 /* END Homepage styles */
