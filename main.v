@@ -17,7 +17,7 @@ fn serve_static() {
 	mut app := &App{}
 
 	app.static_mime_types['.glb'] = 'model/gltf-binary'
-	app.handle_static('static', true) or { panic(err) }
+	app.handle_static('dist', true) or { panic(err) }
 
 	veb.run[App, Context](mut app, 8080)
 }

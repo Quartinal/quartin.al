@@ -1,2 +1,4 @@
 main*
 !main.v
+node_modules/
+dist/
